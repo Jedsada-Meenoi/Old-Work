@@ -1,0 +1,175 @@
+<html>
+  <title>Costa Rican Medium Roast</title>
+  <head>
+    <!--link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/ProDetail.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <style>
+
+    </style>
+    <script type="application/javascript">
+      //declare variables for function
+      let toggle1 = true;
+      let toggle2 = true;
+      let toggle3 = false;
+      let toggle4 = true;
+
+      function changeimg(){
+        toggle1 = !toggle1;
+        //check boolean for switch image
+        if(toggle1){
+          let pic1 = document.getElementById("picture").src="https://cdn.discordapp.com/attachments/1062637077205880913/1080038472716386395/Bag-costarican-mr_400x600.png";
+        }else{
+          let pic1 = document.getElementById("picture").src="https://cdn.discordapp.com/attachments/1062637077205880913/1080039028268740729/1676223983.png";
+        }
+      }
+
+      /*selection1 is left price box select function
+        selection2 is right price box select function
+        both boolean use for synchronization to not select both box in the same time*/
+      function selection1(){
+        //check boolean
+        if(toggle3 == true && toggle2 == false ){
+          //change boolean
+          toggle2 = true;
+          toggle3 = false;
+          //change border color
+          let text1 = document.getElementById("left_box");
+          text1.style.borderColor="#a18b0a";
+          let text2 = document.getElementById("right_box");
+          text2.style.borderColor="black";
+          
+        }
+      }
+
+      function selection2(){
+        //check boolean
+        if(toggle3 == false && toggle2 == true ){
+          //change boolean
+          toggle2 = false;
+          toggle3 = true;
+          //change border color
+          let text1 = document.getElementById("left_box");
+          text1.style.borderColor="black";
+          let text2 = document.getElementById("right_box");
+          text2.style.borderColor="#a18b0a";
+        }
+      }
+
+      //switch word in add to cart box
+      function Addtocart(){
+        if(toggle4){
+        //change boolean
+        toggle4 = false;
+        let text3 = document.getElementById("word");
+        text3.innerHTML="Cancel";
+        }else{
+        //change boolean
+        toggle4 = true;
+        let text3 = document.getElementById("word");
+        text3.innerHTML="Add to cart";
+        }
+      }
+    </script>
+  </head>
+  <div class = "logins">
+    <h2><a href="/login"><i class="bi-person-fill"></i></a></h2>
+    <h2><a href="#"><i class="bi bi-cart"></i></a></h2>
+  </div>
+  <header>
+    <article class = "colum">
+        <h1>Coffee Shop</h1>
+    </article>  
+  </header>
+  
+  <nav>
+    <h3><a href="/home"> Home</a></h3>
+      <h3><a href="/products"> Products</a></h3>
+      <h3><a href="/search"> Search</a></h3>
+      <h3><a href="/aboutus"> About Us</a></h3>
+  </nav>
+<body>
+  <main>
+    <div id="product detail">
+      <!--create box on top of screen in main section-->
+      <div class="product_grid_top">
+        <!--display product name-->
+        <h1 class="product_name">Costa Rican Medium Roast</h1>
+        <div class="product_price_topic">
+          <h3><span class="price">$13.99</span></h3>
+        </div>
+        <!--create star symbols-->
+        <div class="star_line">
+          <h2><i class="bi bi-star"></i></h2>
+          <h2><i class="bi bi-star"></i></h2>
+          <h2><i class="bi bi-star"></i></h2>
+          <h2><i class="bi bi-star"></i></h2>
+          <h2><i class="bi bi-star"></i></h2>
+        </div>
+      </div>
+      <!--create big box on middle of screen and divide it into two small box which is left and right boxs-->
+      <div class="main_grid">
+        <!--left box contain picture of product-->
+        <div class="left_col">
+          <div class="product_picture">
+            <!--when click picture switch to another picture-->
+            <img src="https://cdn.discordapp.com/attachments/1062637077205880913/1080038472716386395/Bag-costarican-mr_400x600.png" id="picture" alt="Character1" onclick="changeimg()">
+          </div>
+        </div>
+        <!--right box contain price option, product detail and add to cart button each of them have their own box and size-->
+
+        <div class="right_col">
+          <!--create first option box when click will call function-->
+          <div id="left_box" onclick="selection1()">
+            <h2 id="LB_name">One-time purchase<br>$13.99</h2>
+          </div>
+          <!--create second option box when click will call function-->
+          <div id="right_box" onclick="selection2()">
+            <h2 id="RB_name">Subscribe<br>$13.99</h2>
+          </div>
+          <!--create production detail box-->
+          <div class="product_detail">
+            <h2 id="detail_title">Costa Rican Medium Roast</h2> 
+            <div id="detail">
+              These Costa Rican coffee beans come from one of the exceptional
+              coffee farms in the Tarrazu region. You get a premium Tarrazu at a non-
+              premium price from Hacienda La Minita.<br><br>
+
+              This arabica bean is a classic Tarrazu exhibiting the fruity, 
+              nutty characteristics that make this region's coffees famous. Brightness, body,
+              complexity, aroma, and good balance are all clearly apparent. 
+              It has the classic piquant acidity and lively winey flavor expected of the region’s
+              best coffees. El Conquistador is well balanced with notes of lush 
+              tropical fruit and bittersweet chocolate and has a smooth pronounced body.
+
+          </div>
+          </div>
+          <!--create add to cart button-->
+          <div class="purchase_box" onclick="Addtocart()">
+            <div id="word">
+              Add to cart
+            </div>
+          </div>
+        </div>
+      </div>
+        
+    </div>
+  </main>
+</body>
+<footer>
+      <div class = "foot">
+      <h3>About Us</h3>
+      <p>"We are new organize aimming to open<br>the best coffee shop around the world."</p>
+    </div>
+    <div class="foot2">
+      <h3>Follow Us</h3>
+      <div class=inside>
+        <p><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i> Facebook</a></p>
+        <p><a href="https://www.instagram.com/"><i class="bi bi-instagram"></i> Instragram</a></p>
+        <p><a href="/location"><i class="bi bi-geo-alt-fill"></i> Shop location</a></p>
+      </div>
+    </div>
+    </footer>
+  </body>
+</html>

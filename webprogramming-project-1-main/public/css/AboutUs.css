@@ -1,0 +1,59 @@
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  /* set font of page */
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 100px;
+  padding: 0 8px;
+  margin-top: -50px;
+
+
+
+}
+
+.card { /*Set card shadow*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 1px;
+
+
+}
+
+.img { /*Set image to be middle*/
+  margin-left: 15%;
+
+}
+
+.box { 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.container {
+  padding: 15px;
+  line-height: 0.2cm;
+  text-align: center;
+
+}
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}

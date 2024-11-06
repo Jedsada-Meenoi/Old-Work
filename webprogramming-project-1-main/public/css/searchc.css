@@ -1,0 +1,127 @@
+/* Code for search page */
+*{
+    box-sizing: border-box; /* Set entire page */
+  }
+  
+  .question{/* Set text color and location */
+    padding-top: 50px;
+    margin-bottom : 50px;
+    color: green;
+    
+  }
+  
+  .sea{ /* Set body box to adjust search bar */
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    justify-content: center;
+    
+  }
+  .sea.inner{
+    margin: 0;
+    
+  }
+  
+  .oppa{ /* Box color for text */
+    background: white;
+    margin-bottom: 5%;
+    width: 800px;
+    height: 55px;
+    display: flex;
+    
+  }
+  
+  .oppa input{ /* Set input box size */
+    flex: 1;
+    height: 68px;
+    padding: 15px;
+    font-size: 18px;
+    vertical-align: middle;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .oppa2 .butt{ /* Set search button size and color */
+    background-color: rgb(183, 98, 29);
+    padding: 10px 20px;
+    height: 50px;
+    border: none;
+    outline: none;
+    
+  }
+  
+  .butt{ /* Set button text color */
+    color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .sea-op { /* Set text color and location */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+    color: green;
+    font-weight: bold;
+    font-size: 15px;
+  
+  }
+  .sea-op select { /* Set select box color and size */
+    color: orangered;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    background-color: transparent;
+    
+  }
+  
+  .sea-op select option{
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  select::placeholder {
+    color: whitesmoke;
+    
+   }
+   
+   select:focus {
+    outline: none; 
+    border: 2px solid black; 
+    border-radius: 5px; 
+  }
+  
+  
+  @media only screen and (min-width: 1300px) { /* Set if screen is more than 1300px */
+    .question{            
+     font-size: 40px;
+      
+    }
+    .sea{
+      height: 60vh;
+      align-items: center;
+    }
+    .sea-op .my-select-box {
+      max-width: 500px;
+    }
+    .sea-op {
+      font-size: 20px;
+    }
+    .sea-op select {
+      font-size: 20px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 790px) { /* Set if screen lower than 790px */
+    .sea{
+      height: 90vh; 
+      align-items: center; 
+    }
+    
+  }

@@ -1,0 +1,61 @@
+/* Code for Home page */
+body {
+    height: 100%; /* Set high of body */
+    margin: 0;
+}
+.hero {
+    width: auto; /* Function for set box space in body and image in middle */
+    height: 90vh;
+    display: flex;
+    justify-content:space-between;
+    padding-left: 3%;
+    align-items: center;
+    
+    background-image: url(https://github.com/PritamSarbajna/coffee-shop-website/blob/main/images/home-img.jpg?raw=true);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 7623107af02af9f31cefbd458b16546f4af0d367
+}
+
+.hero h1{ /* Set font and color of word */
+    font-size: 2em;
+    color: white;
+}
+.hero h2{
+    color: white;
+}
+.hero .btn { /* Red button in middle */
+    
+    display: block;
+    background-color: red;
+    width: 120px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 150px;
+    margin-right: auto;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+<<<<<<< HEAD
+@media only screen and (min-width: 1400px) { /* Change font size of sentence when screen more than 1400px */
+    .hero h1{
+        font-size: 3em;
+    }
+    .hero h2{
+        font-size: 2em;
+    }
+}
+=======
+.hero-inner {
+    margin: 25%;
+}
+>>>>>>> 7623107af02af9f31cefbd458b16546f4af0d367
